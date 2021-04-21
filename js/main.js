@@ -9,7 +9,12 @@ function consultaCep() {
             $('#bairro').html(response.bairro)
             $('#cidade').html(response.localidade)
             $('#uf').html(response.uf)
-            $('#titulo-cep').html(`CEP: ${cep}`)
+            $('#titulo-cep').html(`CEP ${response.cep}`)
         }
     })
+    $('.cep').show()
 }
+
+$(function(){
+    $('.cep').hide()
+})
