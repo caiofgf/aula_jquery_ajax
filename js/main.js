@@ -1,4 +1,5 @@
 function consultaCep() {
+    $('.barra-progresso').show()
     var cep = $('#cep').val()
     $.ajax({
         url: `https://viacep.com.br/ws/${cep}/json`,
@@ -13,8 +14,10 @@ function consultaCep() {
         }
     })
     $('.cep').show()
+    $('.barra-progresso').hide()
 }
 
 $(function(){
     $('.cep').hide()
+    $('.barra-progresso').hide()
 })
