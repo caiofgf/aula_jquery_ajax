@@ -5,7 +5,11 @@ function consultaCep() {
         type: "GET",
         success: function(response) {
             console.log(response)
-            $('#endereco').html(`Endereço: ${response.logradouro}<br>Bairro: ${response.bairro}<br>Cidade: ${response.localidade}<br>Estado: ${response.uf}`)
+            $('#logradouro').html(response.logradouro)
+            $('#bairro').html(response.bairro)
+            $('#cidade').html(response.localidade)
+            $('#uf').html(response.uf)
+            $('#titulo-cep').html(`CEP: ${cep}`)
         }
     })
 }
